@@ -10,6 +10,10 @@ describe('report', function() {
   })
 
   it('returns Amber: 1 when input is Amber', function() {
+    expect(report.results('Amber')).toEqual('Amber: 1')
+  })
+
+  it('returns Red: 1 when input is Red', function() {
     
   })
 })
