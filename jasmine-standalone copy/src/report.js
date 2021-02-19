@@ -26,7 +26,7 @@ class Report {
     } else {
       answer = `${uniqueArr[0]}: ${countedResults[uniqueArr[0]]}`
       for(let n = 1; n < uniqueArr.length; n++) {
-        answer += '\n' +  `${uniqueArr[n]}: ${countedResults[uniqueArr[n]]}`
+        answer += '\n' + `${uniqueArr[n]}: ${countedResults[uniqueArr[n]]}`
       }
       return answer
     }
