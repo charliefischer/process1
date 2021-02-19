@@ -14,6 +14,6 @@ describe('report', function() {
   })
 
   it('returns Red: 1 when input is Red', function() {
-    
+    expect(report.results('Red')).toEqual('Red: 1')
   })
 })
