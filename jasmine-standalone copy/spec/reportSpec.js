@@ -16,4 +16,12 @@ describe('report', function() {
   it('returns Red: 1 when input is Red', function() {
     expect(report.results('Red')).toEqual('Red: 1')
   })
+
+  it('returns the correct count for multiples', function() {
+    expect(report.results('Green,Green')).toEqual('Green: 2')
+  })
+
+  it('returns the correct count for different colours', function() {
+    expect(report.results('Green,Red')).toEqual('Green: 1\nRed: 1')
+  })
 })

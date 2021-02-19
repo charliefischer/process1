@@ -1,13 +1,30 @@
 
 class Report {
+
+
+
   results = (str) =>{
-    if(str === 'Green'){
-      return 'Green: 1';
-    } else if (str === 'Amber') {
-      return 'Amber: 1';
+    let countedResults = {}
+    let arrayOfResults = str.split(',')
+    let i;
+    for (i = 0; i < arrayOfResults.length; i++){
+      if(countedResults.hasOwnProperty(arrayOfResults[i])){
+        countedResults[arrayOfResults[i]]++
+      } else {
+        countedResults[arrayOfResults[i]] = 1;
+      }
+      // console.log(`${arrayOfResults[i]}: ${countedResults[arrayOfResults[i]]}`)
+    }
+    console.log(i)
+    console.log(arrayOfResults[i - 1])
+    console.log(countedResults[arrayOfResults[i]])
+    if(arrayOfResults.length == 1) {
+      return `${arrayOfResults[i - 1]}: ${countedResults[arrayOfResults[i - 1]]}`
     } else {
-      return 'Red: 1';
+      for(let n = 0; n < arrayOfResults.length; n++) {
+        return `${arrayOfResults[n]}: ${countedResults[arrayOfResults[n]]}`
+      }
     }
 
-    }
+  }
 }
